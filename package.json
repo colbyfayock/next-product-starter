@@ -1,7 +1,7 @@
 {
-  "name": "next-sass-starter",
-  "title": "Next.js Sass Starter",
-  "description": "Use Sass to start your Next.js app with CSS superpowers!",
+  "name": "next-product-starter",
+  "title": "Next.js Product Starter",
+  "description": "Create a new product!",
   "version": "0.1.0",
   "author": {
     "name": "Colby Fayock",
@@ -9,9 +9,13 @@
     "url": "https://twitter.com/colbyfayock"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.9.0",
     "next": "9.5.1",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-helmet": "^6.1.0",
     "sass": "^1.26.10"
   },
   "keywords": [
@@ -23,15 +27,15 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
-  "homepage": "https://next-sass-starter.vercel.app",
+  "homepage": "https://next-product-starter.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/next-sass-starter"
+    "url": "https://github.com/colbyfayock/next-product-starter"
   },
   "bugs": {
-    "url": "https://github.com/colbyfayock/next-sass-starter/issues"
+    "url": "https://github.com/colbyfayock/next-product-starter/issues"
   }
 }
