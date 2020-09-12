@@ -1,4 +1,4 @@
-# Next.js Product Starter
+# Next.js Space Jelly Product Starter
 
 
 
