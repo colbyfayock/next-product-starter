@@ -1,8 +1,8 @@
-import styles from './Nav.module.scss';
-
 import useSite from 'hooks/use-site';
 
 import Section from 'components/Section';
+
+import styles from './Nav.module.scss';
 
 const Nav = () => {
   const { metadata = {} } = useSite();

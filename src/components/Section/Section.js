@@ -1,14 +1,14 @@
+import ClassName from 'models/classname';
+
 import styles from './Section.module.scss';
 
 const Section = ({ children, className, backgroundColor, ...rest }) => {
-  let sectionClassName = styles.section;
+  const sectionClassName = new ClassName(styles.section);
 
-  if ( className ) {
-    sectionClassName = `${sectionClassName} ${className}`;
-  }
+  sectionClassName.addIf(className, className);
 
   return (
-    <section className={sectionClassName} data-background-color={backgroundColor} {...rest}>
+    <section className={sectionClassName.toString()} data-background-color={backgroundColor} {...rest}>
       { children }
     </section>
   )

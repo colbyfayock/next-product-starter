@@ -1,14 +1,14 @@
+import ClassName from 'models/classname';
+
 import styles from './Container.module.scss';
 
 const Container = ({ children, className }) => {
-  let containerClassName = styles.container;
+  const containerClassName = new ClassName(styles.container);
 
-  if ( className ) {
-    containerClassName = `${containerClassName} ${className}`;
-  }
+  containerClassName.addIf(className, className);
 
   return (
-    <div className={containerClassName}>
+    <div className={containerClassName.toString()}>
       { children }
     </div>
   )
