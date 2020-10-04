@@ -3,16 +3,16 @@
 
 
 ## ⚡️ Quick Start
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/colbyfayock/next-product-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/colbyfayock/next-spacejelly-product-starter)
 
 ## 🚀 Getting Started
 
 Run the following command to create a new project with this Starter:
 
 ```
-yarn create next-app my-app -e https://github.com/colbyfayock/next-product-starter
+yarn create next-app my-app -e https://github.com/colbyfayock/next-spacejelly-product-starter
 # or
-npx create-next-app my-app -e https://github.com/colbyfayock/next-product-starter
+npx create-next-app my-app -e https://github.com/colbyfayock/next-spacejelly-product-starter
 ```
 
 Once the project and dependencies are finished installing, you can navigate to that directory and start up the development server with:
