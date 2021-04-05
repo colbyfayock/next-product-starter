@@ -8,6 +8,10 @@ import Section from 'components/Section';
 import Container from 'components/Container';
 import Button from 'components/Button';
 import FeatureList from 'components/FeatureList';
+import Details from 'components/Details';
+import Video from 'components/Video';
+import Form from 'components/Form';
+import SectionAuthor from 'components/SectionAuthor';
 
 export default function Home() {
   const { metadata } = useSite();
@@ -27,14 +31,19 @@ export default function Home() {
             { siteName }
           </h1>
 
-          <p>
-            Get started by editing{' '}
-            <code>pages/index.js</code>
+          <p className={styles.homeSubtitle}>
+            Get started today!
           </p>
 
-          <p>
-            <Button>Buy Now</Button>
+          <p className={styles.homeAction}>
+            <Button>Get Started</Button>
           </p>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Video width="560" height="315" src="https://www.youtube.com/embed/QjZIeA952jE" />
         </Container>
       </Section>
 
@@ -43,6 +52,42 @@ export default function Home() {
         '💪 What makes it so awesome?',
         '😢 What isn\'t it great at?'
       ]} />
+
+      <Section>
+        <Container>
+          <Details>
+            <summary>
+              What to expect?
+            </summary>
+            <p>
+              In summary...
+            </p>
+          </Details>
+        </Container>
+      </Section>
+
+      <Section className={styles.homeSectionForm}>
+        <Container>
+          <h2>
+            Susbcribe to My Newsletter
+          </h2>
+          <p>
+            Get free weekly tutorials straight to your inbox!
+          </p>
+          <Form action="https://colbyfayock.com/newsletter">
+            <p>
+              <input name="email_address" aria-label="Your email address" placeholder="Your email address" required type="email" />
+            </p>
+            <p>
+              <Button>
+                Get Free Tutorials
+              </Button>
+            </p>
+          </Form>
+        </Container>
+      </Section>
+
+      <SectionAuthor />
 
     </Layout>
   )

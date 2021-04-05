@@ -6,8 +6,9 @@ import useSite from 'hooks/use-site';
 import Nav from 'components/Nav';
 import Main from 'components/Main';
 import Footer from 'components/Footer';
+import ShareAnchor from 'components/ShareAnchor';
 
-const Layout = ({ children, displayNav = true }) => {
+const Layout = ({ children, displayNav = true, displayShare = true }) => {
   const { metadata = {} } = useSite();
   const { siteName, homepage } = metadata;
 
@@ -32,7 +33,10 @@ const Layout = ({ children, displayNav = true }) => {
 
       <Main>{ children }</Main>
 
-      <Footer />
+      <div>
+        { displayShare && <ShareAnchor /> }
+        <Footer />
+      </div>
     </div>
   )
 }

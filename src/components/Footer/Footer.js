@@ -1,4 +1,4 @@
-import { FaTwitter, FaGithub, FaYoutube } from 'react-icons/fa';
+import { FaTwitter, FaGithub, FaYoutube, FaTwitch } from 'react-icons/fa';
 
 import useSite from 'hooks/use-site';
 
@@ -11,7 +11,8 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
   const { metadata } = useSite();
-  const { supportEmail, authorName, authorUrl } = metadata;
+  const { supportEmail, authorName, authorUrl, footer } = metadata;
+  const { links } = footer;
 
   return (
     <footer className={styles.footer}>
@@ -26,9 +27,13 @@ const Footer = () => {
           <div>
             <h3>Moar awesome!</h3>
             <ul>
-              <li>
-                <a href="https://colbyfayock.com">colbyfayock.com</a>
-              </li>
+              { links.map(({ url, title }) => {
+                return (
+                  <li key={`${url}-${title}`}>
+                    <a href={url}>{title}</a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           <div className={styles.footerLegal}>
@@ -44,20 +49,28 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/colbyfayock">
+                  <a href="https://youtube.com/colbyfayock">
+                    <span className="sr-only">YouTube</span>
+                    <FaYoutube className={styles.footerIconYoutube} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/colbyfayock">
                     <span className="sr-only">GitHub</span>
                     <FaGithub />
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/colbyfayock">
-                    <span className="sr-only">YouTube</span>
-                    <FaYoutube className={styles.footerIconYoutube} />
+                  <a href="https://twitch.tv/colbyfayock">
+                    <span className="sr-only">Twitch</span>
+                    <FaTwitch className={styles.footerIconTwitch} />
                   </a>
                 </li>
               </ul>
             </div>
-            <CosmoMono className={styles.footerCosmo} classNameStroke={styles.footerCosmoStroke} />
+            <a className={styles.footerCosmo} href="https://spacejelly.dev">
+              <CosmoMono  classNameStroke={styles.footerCosmoStroke} />
+            </a>
           </div>
         </Container>
       </Section>
