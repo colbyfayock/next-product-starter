@@ -27,5 +27,8 @@ module.exports = {
         title: 'colbyfayock.com'
       }
     ]
+  },
+  env: {
+    gaPropertyId: 'XX-123456789-1'
   }
 }

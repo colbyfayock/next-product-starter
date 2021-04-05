@@ -1,4 +1,4 @@
-export const GA_TRACKING_ID = 'XX-123456789-1';
+export const GA_PROPERTY_ID = process.env.NEXT_PUBLIC_GA_PROPERTY_ID;
 
 /**
  * pageview
@@ -6,7 +6,7 @@ export const GA_TRACKING_ID = 'XX-123456789-1';
  */
 
 export function pageview(url) {
-  window.gtag('config', GA_TRACKING_ID, {
+  window.gtag('config', GA_PROPERTY_ID, {
     page_path: url,
   });
 }
